@@ -1,6 +1,7 @@
 package ru.netology;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class PhoneBook {
@@ -21,5 +22,9 @@ public class PhoneBook {
 
     public int findByName(String name) {
         return nameToNumber.get(name);
+    }
+
+    public List<String> printAllNames(){
+        return null;
     }
 }

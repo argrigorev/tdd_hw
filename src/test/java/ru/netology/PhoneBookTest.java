@@ -3,6 +3,8 @@ package ru.netology;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 public class PhoneBookTest {
     @Test
     public void testAdd() {
@@ -32,6 +34,18 @@ public class PhoneBookTest {
 
         Assertions.assertEquals(12345, pb.findByName("Ivan"));
         Assertions.assertEquals(67890, pb.findByName("Artem"));
+    }
+
+    @Test
+    public void testPrintAllNames(){
+        PhoneBook pb = new PhoneBook();
+
+        pb.add("Ivan", 12345);
+        pb.add("Artem", 67890);
+        pb.add("Igor", 55555);
+
+        List<String> expected = List.of("Artem", "Igor", "Ivan");
+        Assertions.assertEquals(expected, pb.printAllNames());
     }
 
 }
