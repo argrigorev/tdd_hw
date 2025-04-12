@@ -1,11 +1,9 @@
 package ru.netology;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class PhoneBook {
-    private final Map<String, Integer> nameToNumber = new HashMap<>();
+    private final Map<String, Integer> nameToNumber = new TreeMap<>();
     private final Map<Integer, String> numberToName = new HashMap<>();
 
     public int add(String name, int number) {
@@ -25,6 +23,6 @@ public class PhoneBook {
     }
 
     public List<String> printAllNames(){
-        return null;
+        return new ArrayList<>(nameToNumber.keySet());
     }
 }
