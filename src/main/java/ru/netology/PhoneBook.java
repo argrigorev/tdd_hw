@@ -8,7 +8,7 @@ public class PhoneBook {
     private final Map<Integer, String> numberToName = new HashMap<>();
 
     public int add(String name, int number) {
-        if(!nameToNumber.containsKey(name)){
+        if (!nameToNumber.containsKey(name)) {
             nameToNumber.put(name, number);
             numberToName.put(number, name);
         }
@@ -17,5 +17,9 @@ public class PhoneBook {
 
     public String findByNumber(int number) {
         return numberToName.get(number);
+    }
+
+    public int findByName(String name) {
+        return 0;
     }
 }
